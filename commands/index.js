@@ -9,7 +9,10 @@ class Commands {
     }
 
     start() {
-        this.bot.start((ctx) => ctx.reply('Welcome'));
+        this.bot.start((ctx) => {
+            console.log(ctx.state, 'state');
+            ctx.reply('Welcome');
+        });
     }
 }
 
